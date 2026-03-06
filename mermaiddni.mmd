@@ -1,0 +1,7 @@
+classDiagram
+    class ValidadorDNI {
+        -letras_validas: str
+        +validar_dni(dni: str) bool
+    }
+    
+    note for ValidadorDNI "Módulo para validar DNI español\nFormato: 8 dígitos + 1 letra"
