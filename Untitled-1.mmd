@@ -1,0 +1,51 @@
+---
+query: genera un diagrama de clases para este codigo
+references:
+  - "File: /validar_dni.py"
+  - >+
+    Reference: <skills>
+
+    Here is a list of skills that contain domain specific knowledge on a variety
+    of topics.
+
+    Each skill comes with a description of the topic and a file path that
+    contains the detailed instructions.
+
+    When a user asks you to perform a task that falls within the domain of a
+    skill, use the #tool:readFile tool to acquire the full instructions from the
+    file URI.
+
+    <skill>
+
+    <name>agent-customization</name>
+
+    <description>**WORKFLOW SKILL** — Create, update, review, fix, or debug VS
+    Code agent customization files (.instructions.md, .prompt.md, .agent.md,
+    SKILL.md, copilot-instructions.md, AGENTS.md). USE FOR: saving coding
+    preferences; troubleshooting why instructions/skills/agents are ignored or
+    not invoked; configuring applyTo patterns; defining tool restrictions;
+    creating custom agent modes or specialized workflows; packaging domain
+    knowledge; fixing YAML frontmatter syntax. DO NOT USE FOR: general coding
+    questions (use default agent); runtime debugging or error diagnosis; MCP
+    server configuration (use MCP docs directly); VS Code extension development.
+    INVOKES: file system tools (read/write customization files), ask-questions
+    tool (interview user for requirements), subagents for codebase exploration.
+    FOR SINGLE OPERATIONS: For quick YAML frontmatter fixes or creating a single
+    file from a known pattern, edit the file directly — no skill
+    needed.</description>
+
+    <file>copilot-skill:/agent-customization/SKILL.md</file>
+
+    </skill>
+
+    </skills>
+
+generationTime: 2026-03-06T10:44:45.562Z
+---
+classDiagram
+    class ValidadorDNI {
+        -letras_validas: str
+        +validar_dni(dni: str) bool
+    }
+    
+    note for ValidadorDNI "Módulo para validar DNI español\nFormato: 8 dígitos + 1 letra"
